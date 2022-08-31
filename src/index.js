@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
+
+  // In my opinion, the code works but looks sloppy
   document.querySelector('form').addEventListener("submit", (e) => {
     e.preventDefault();
     const som = document.getElementById("new-task-description");
     if(som.value !== ""){
       addToDOM(som.value)
     }
+    document.querySelector('form').reset();
   })
 });
 
